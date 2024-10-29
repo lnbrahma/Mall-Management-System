@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/chat/chat",
+    "pages/post/post",
+    "pages/school/school",
+    "pages/mine/mine",
+    "pages/logs/logs",
+    "pages/about/about",
+    "pages/leaveword_add/leaveword_add",
+    "pages/leaveword_list/leaveword_list",
+    "pages/lianx/lianx",
+    "pages/userInfo/userInfo",
+    "components/searchInput/searchInput",
+    "pages/search/search",
+    "pages/productInfo_userlist/productInfo_userlist",
+    "pages/productInfo_modify/productInfo_modify",
+    "pages/productInfo_detail/productInfo_detail",
+    "pages/details/index",
+    "pages/productInfo_myproject/productInfo_myproject",
+    "pages/submitadd",
+    "pages/submitadd/submitadd"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffd747",
+    "navigationBarTitleText": "易转",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#333",
+    "color": "#333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./images/ic_menu_home_nor.png",
+        "selectedIconPath": "./images/ic_menu_home_pressed.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/school/school",
+        "iconPath": "./images/xiaoyuan.png",
+        "selectedIconPath": "./images/xiaoyuan_pressed.png",
+        "text": "校园"
+      },
+      {
+        "pagePath": "pages/post/post",
+        "iconPath": "./images/ic_menu_add_nor.png",
+        "selectedIconPath": "./images/ic_menu_add_nor.png",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "iconPath": "./images/ic_menu_chat_nor.png",
+        "selectedIconPath": "./images/ic_menu_chat_pressed.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "./images/ic_menu_me_nor.png",
+        "selectedIconPath": "./images/ic_menu_me_pressed.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap85.json"
+}

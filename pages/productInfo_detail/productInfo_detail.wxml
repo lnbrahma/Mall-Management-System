@@ -1,0 +1,104 @@
+<view class="container">
+  <loading hidden="{{loadingHide}}">
+    {{loadingText}}
+  </loading>
+
+  <view class="title">商品信息详情</view>
+  <view class="productInfo_detail_view"> 
+      <view class="viewItem">
+        <view class="label">商品编号：</view>
+        <view class="content">
+          <view>{{productId}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">商品类别：</view>
+        <view class="content"> 
+          <view>{{productClassObj}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">商品名称：</view>
+        <view class="content"> 
+          <view>{{productName}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">价格区域：</view>
+        <view class="content"> 
+          <view>{{priceRegionObj}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">商品价格：</view>
+        <view class="content"> 
+          <view>{{price}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">成色：</view>
+        <view class="content"> 
+          <view>{{newOldLevelObj}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">区域：</view>
+        <view class="content"> 
+          <view>{{areaObj}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">商品图片：</view>
+        <view class="content"> 
+          <image mode="aspectFill" src="{{productPhotoUrl}}"></image>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">联系人：</view>
+        <view class="content"> 
+          <view>{{connectPerson}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">联系电话：</view>
+        <view class="content"> 
+          <view>{{connectPhone}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">商品描述：</view>
+        <view class="content"> 
+          <view>{{productDes}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">发布人：</view>
+        <view class="content"> 
+          <view>{{userObj}}</view>
+        </view>
+      </view>
+
+       <view class="viewItem">
+        <view class="label">发布时间：</view>
+        <view class="content"> 
+          <view>{{addTime}}</view>
+        </view>
+      </view>
+
+      <view>
+        <navigator class="btnReturn" open-type="navigateBack" hover-class="navigator-hover">返回</navigator>
+      </view>
+
+  </view>
+</view>

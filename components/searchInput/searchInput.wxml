@@ -1,0 +1,13 @@
+<view class="search_menu">
+    <view class='page_row' bindtap="suo">  
+      <navigator url="../../pages/search/search"class="search">  
+        <view class="df search_arr">  
+          <icon class="searchcion" size='20' type='search'></icon>  
+          <input class="" placeholder="请输入关键字" value="{{searchValue}}"/>  
+        </view>  
+      </navigator>  
+      <view class='sousuo'>
+        <text class = "sousuotext">搜索</text>
+      </view>  
+    </view>  
+</view>

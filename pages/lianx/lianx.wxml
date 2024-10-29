@@ -1,0 +1,23 @@
+<!--pages/about/about.wxml-->
+<loading hidden="{{loadingHide}}">
+  {{loadingText}}
+</loading>
+<view class="IndexHome">
+  <image src='../../images/logo.png' mode="widthFix" class="img"></image>
+</view>
+
+<view class="IndexList">
+  <view bindtap="callmeTap">
+    <!-- <image src="cloud://cloud1-7g5p19u906f43601.636c-cloud1-7g5p19u906f43601-1309591266/tel.png" class="telIco" mode="widthFix"></image> -->
+    <text class="tel">电话 / 19834078358</text>
+  </view>
+  <view>
+    <!-- <image src="cloud://cloud1-7g5p19u906f43601.636c-cloud1-7g5p19u906f43601-1309591266/weixin.png" class="weixinIco" mode="widthFix"></image> -->
+    <text class="map">微信 / B19834078358</text>
+  </view>
+  <view>
+    <!-- <image src="cloud://cloud1-7g5p19u906f43601.636c-cloud1-7g5p19u906f43601-1309591266/email.png" class="eIco" mode="widthFix"></image> -->
+    <text class="email">邮件 / 2380482790@qq.com</text>
+  </view>
+</view>
+

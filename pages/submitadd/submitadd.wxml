@@ -1,0 +1,39 @@
+<!--pages/submitadd/submitadd.wxml-->
+<view class="container">
+  <form bindsubmit="">
+    <view class="title description">
+      <view>商品标题</view>
+      <input type="text" placeholder="请输入商品名称" model:value="{{title}}" bindinput="delValue" />
+    </view>
+    <view class="sort description">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{sortarr}}">
+        <view class="picker">
+          <view id="description">
+            商品类别
+          </view>
+          <view class="sortel">
+          {{sortarr[index]}}
+        </view>
+        </view>
+        
+      </picker>
+    </view>
+    <view class="old description">
+      <view>商品新旧程度</view>
+      <slider bindchange="changeSlider" step="5" value="{{slider}}"/>
+      <view>{{slider}}</view>
+    </view>
+    <view class="sale description">
+      <view>商品价格</view>
+      <input type="number" maxlength="6"/>
+      <view>/元</view>
+    </view>
+    <view class="imaging description">
+      <view>商品图片</view>
+      <view class="showimage" bindtap="choseImage">
+        <view class="addimage">+</view>
+      </view>
+      <image src="{{imagearr.tempFilePath}}" wx:if="{{imagearr}}"  alt="图片" class="image-show"/>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,111 @@
+<view style='height:100vh;'>
+<scroll-view scroll-y style='height:92vh'>
+  <swiper 
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" 
+      interval="{{interval}}" 
+      duration="{{duration}}"
+      >
+        <block wx:for="{{imgUrls}}">
+          <swiper-item>
+            <image src='{{item}}' style='height:60vh;' />
+          </swiper-item>
+        </block>
+  </swiper>
+  <view class='title'>
+    {{data.title}}
+    <view class='spec'>
+    {{data.spec}}
+    </view>
+  </view>
+  <view class='price'>
+  <text>￥</text>
+  {{price}}
+  <text>热卖款：ipone11</text>
+  </view>
+  
+  <view class='freight'>
+    <view class='left'>
+    位置：滨海校区中院6公寓
+    </view>
+    <!-- <view class='right'>
+    销量：3000+
+    </view> -->
+   </view> 
+   <!-- <view class='choice' bindtap='specFun'>
+      规格：请选择蛋糕规格
+   </view> -->
+   <view class='tab'>
+    <view class='left' bindtap="tabFun" data-state="{{1}}">
+      <text class='{{tabIs?"tab-acitve":""}}'>产品详情</text>
+    </view>
+    <view class='right' bindtap="tabFun" data-state="{{2}}">
+      <text class='{{!tabIs?"tab-acitve":""}}'>售后保障</text>
+    </view>
+   </view>
+   <view class='content' wx:if="{{tabIs}}">
+    <view>容量：64GB；128GB；256GB</view>
+    <view>显示屏：Liquid视网膜高清显示屏；6.1英寸（对角线）LCD全面屏；多点触控显示屏；1792 x 828 像素分辨率；326 ppi；1400:1 对比度 (典型)；广色域显示 (P3)；625 尼特最大亮度 (典型)</view>
+    <view>防溅、抗水、防尘：效果在 IEC 60529 标准下达到 IP68 级别 (在最深 2 米的水下停留时间最长可达 30 分钟)</view>
+    <view>芯片：A13仿生</view>
+    <view>面容 ID：通过原深感摄像头进行面容识别</view>
+      </view>
+   <view class='content' wx:if="{{!tabIs}}">
+    售后保障
+   </view>
+</scroll-view>
+<view class='bottom'>
+<view class='icon' bindtap='goShopCar'>
+    <image src='/images/shopping_cart_return.png' style='width:20px;height:17px;'></image>
+    <text>购物车</text>
+</view>
+ <!-- bindtap='specFun' -->
+<view class='btn' bindtap='addCart'>
+  联系卖家
+</view>
+<view class='btn' style='background: #FE4543;' bindtap='specFun'>
+  立即购买
+</view>
+</view>
+<view class='popup' wx:if="{{specIs}}">
+    <view class='title'>
+      <view class='img'>
+        <image src='cloud://cloud1-7g5p19u906f43601.636c-cloud1-7g5p19u906f43601-1309591266/ipone11.png'></image>
+      </view>
+      <view class='text'>
+        <text>ipone11</text>
+        <view>￥{{price}}</view>
+      </view>
+      <view class='icon' bindtap='specFun'>
+        <image src="/images/delete.png"></image>
+      </view>
+    </view>
+  <scroll-view scroll-y class='content'>
+      <view class='item'>
+        <text style='padding-top:10px;'>机身颜色:</text>
+        <view class='list'>
+          <view class='active'>黑色</view>
+          <view>黄色</view>
+          <view>白色</view>
+          <view>粉色</view>
+
+        </view>
+      </view>
+      <view class='item'>
+        <text>版本类型:</text>
+        <view class='list'>
+          <view class='active'>64GB(4GB/64GB/全网通)</view>
+          <view>128GB(4GB/128GB/全网通)</view>
+          <view>256GB(4GB/256GB/全网通)</view>
+  
+
+        </view>
+      </view>
+  </scroll-view>
+  <view class='btn' bindtap='specFun'>
+  下一步
+  </view>
+</view>
+</view>
+
+

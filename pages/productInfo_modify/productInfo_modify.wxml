@@ -1,0 +1,142 @@
+<view class="container">
+  <loading hidden="{{loadingHide}}">
+    {{loadingText}}
+  </loading>
+  <view class="title">编辑商品信息</view>
+
+  <view class="productInfo_modify_view">
+    <form bindsubmit="formSubmit">
+       <view class="formItem">
+        <view class="label">商品编号：</view>
+        <view class="formControl">
+          <input type="text" name="productInfo.productId" disabled="true" value="{{productId}}" />
+        </view>
+      </view>
+      <view class="formItem">
+        <view class="label">商品类别：</view>
+        <view class="formControl">
+          <picker bindchange="bind_productClassObj_change" value="{{productClassObj_Index}}" range-key="productClassName" range="{{productClasss}}">
+            <view style="display:flex;border:1px solid green;">
+              <input hidden="true" name="productInfo.productClassObj.productClassId" value="{{productClasss[productClassObj_Index].productClassId}}" />
+              <input style="width:90%;border:0px;" value="{{productClasss[productClassObj_Index].productClassName}}"></input>
+              <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+            </view>
+          </picker> 
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">商品名称：</view>
+        <view class="formControl">
+          <input type="text" name="productInfo.productName" placeholder="请输入商品名称" value="{{productName}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">价格区域：</view>
+        <view class="formControl">
+          <picker bindchange="bind_priceRegionObj_change" value="{{priceRegionObj_Index}}" range-key="regionName" range="{{priceRegions}}">
+            <view style="display:flex;border:1px solid green;">
+              <input hidden="true" name="productInfo.priceRegionObj.regionId" value="{{priceRegions[priceRegionObj_Index].regionId}}" />
+              <input style="width:90%;border:0px;" value="{{priceRegions[priceRegionObj_Index].regionName}}"></input>
+              <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+            </view>
+          </picker> 
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">商品价格：</view>
+        <view class="formControl">
+          <input type="text" name="productInfo.price" placeholder="请输入商品价格" value="{{price}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">成色：</view>
+        <view class="formControl">
+          <picker bindchange="bind_newOldLevelObj_change" value="{{newOldLevelObj_Index}}" range-key="levelName" range="{{newOldLevels}}">
+            <view style="display:flex;border:1px solid green;">
+              <input hidden="true" name="productInfo.newOldLevelObj.levelId" value="{{newOldLevels[newOldLevelObj_Index].levelId}}" />
+              <input style="width:90%;border:0px;" value="{{newOldLevels[newOldLevelObj_Index].levelName}}"></input>
+              <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+            </view>
+          </picker> 
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">区域：</view>
+        <view class="formControl">
+          <picker bindchange="bind_areaObj_change" value="{{areaObj_Index}}" range-key="areaName" range="{{areaInfos}}">
+            <view style="display:flex;border:1px solid green;">
+              <input hidden="true" name="productInfo.areaObj.areaId" value="{{areaInfos[areaObj_Index].areaId}}" />
+              <input style="width:90%;border:0px;" value="{{areaInfos[areaObj_Index].areaName}}"></input>
+              <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+            </view>
+          </picker> 
+        </view>
+      </view>
+
+       <view class="formItem">
+        <view class="label">商品图片：</view>
+        <view class="formControl" bindtap="select_productPhoto">
+          <input type="text" hidden="true" name="productInfo.productPhoto" value="{{productPhoto}}" />
+          <image class="uploadPic" mode="aspectFill" src="{{productPhotoUrl}}"></image>
+          <image wx:for="{{productPhotoList}}" class="uploadPic" mode="aspectFill" src="{{item}}" wx:key=""></image>
+          <image src="../../images/upic.png" class="uploadPic" mode="widthFix"></image>
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">联系人：</view>
+        <view class="formControl">
+          <input type="text" name="productInfo.connectPerson" placeholder="请输入联系人" value="{{connectPerson}}" />
+        </view>
+      </view>
+
+      <view class="formItem">
+        <view class="label">联系电话：</view>
+        <view class="formControl">
+          <input type="text" name="productInfo.connectPhone" placeholder="请输入联系电话" value="{{connectPhone}}" />
+        </view>
+      </view>
+
+      <view class="formItem" style="align-items:flex-start;">
+        <view class="label">商品描述：</view>
+        <view class="formControl">
+           <textarea placeholder="请输入商品描述" maxlength="800" name="productInfo.productDes" value="{{productDes}}" />
+        </view>
+      </view>
+
+      <view class="formItem" style="display:none;">
+        <view class="label">发布人：</view>
+        <view class="formControl">
+          <picker bindchange="bind_userObj_change" value="{{userObj_Index}}" range-key="realname" range="{{userInfos}}">
+            <view style="display:flex;border:1px solid green;">
+              <input hidden="true" name="productInfo.userObj.user_name" value="{{userInfos[userObj_Index].user_name}}" />
+              <input style="width:90%;border:0px;" value="{{userInfos[userObj_Index].realname}}"></input>
+              <image class="arrow-r" src="/images/arrow-r-0.png"></image>
+            </view>
+          </picker> 
+        </view>
+      </view>
+
+       <view class="formItem" style="display:none;">
+        <view class="label">发布时间：</view>
+        <view class="formControl">
+          <picker mode="date"  start="1970-01-01" end="2030-01-01" value="{{addTime}}" bindchange="bind_addTime_change" >
+            <view style="display:flex;border:1px solid green;">
+              <input style="width:90%;border:0px;" name="productInfo.addTime" placeholder="选择发布时间"  value="{{addTime}}"></input>
+              <text class="clearButton" catchtap="clear_addTime">x</text>
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <view>
+        <button class="vBtn_ok" formType="submit" disabled="{{disabled}}">提交修改</button>
+      </view>
+    </form>
+  </view>
+</view>

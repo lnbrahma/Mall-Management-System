@@ -1,0 +1,69 @@
+/* pages/submitadd/submitadd.wxss */
+.container {
+  background-color: #fff;
+}
+.container .description{
+  display: flex;
+  margin:40rpx;
+}
+.container .title input {
+  padding: 10rpx;
+  width: 400rpx;
+  border-radius: 10rpx;
+  color:rgb(165, 163, 163);
+  border: 1px solid rgb(201, 201, 201);
+}
+.container .title view {
+  margin-top: 14rpx;
+  margin-right: 40rpx;
+}
+.container .sort .picker {
+  display:flex;
+}
+.container .sort .picker #description{
+  margin-top: 11.5rpx;
+  margin-right:40rpx;
+}
+.container .sort .picker .sortel {
+  padding: 10rpx;
+  border-radius: 10rpx;
+  border:1rpx solid rgb(201, 201, 201);
+}
+.container .old slider {
+  width: 350rpx;
+}
+.container .old view {
+  margin-top: 20rpx;
+}
+.container .sale view {
+  margin-top: 11.5rpx;
+}
+.container .sale input{
+  margin-left: 40rpx;
+  margin-right:10rpx;
+  padding: 8rpx;
+  border-radius: 10rpx;
+  border:1rpx solid rgb(201, 201, 201);
+  width:100rpx;
+}
+.container .imaging .addimage {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  border:2rpx dashed rgb(121, 121, 121);
+  font-size: 60rpx;
+  text-align: center;
+  line-height: 200rpx;
+}
+.container .imaging .showimage {
+  display: flex;
+  flex-wrap: wrap;
+  margin:0 40rpx;
+}
+
+.image-show {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  border:2rpx dashed rgb(121, 121, 121);
+}

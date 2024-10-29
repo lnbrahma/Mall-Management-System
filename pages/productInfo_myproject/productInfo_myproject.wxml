@@ -1,0 +1,13 @@
+<!--pages/productInfo_myproject/productInfo_myproject.wxml-->
+<view class="container">
+  <navigator class="addproject" url="../submitadd/submitadd" bindtap="addpro">
+      <image src='{{addphoto}}'></image>
+    </navigator>
+  <block wx:for="{{details}}">
+    <view class="details">
+      <view class="title">口红</view>
+      <view class="date">发布日期：{{date}}</view>
+      <view class="content">详情介绍</view>
+    </view>
+  </block>
+</view>

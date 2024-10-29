@@ -1,0 +1,84 @@
+.title {
+    width: 100%;
+    margin: 20rpx;
+    padding: 20rpx;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 36rpx;
+    color: #fff;
+    background:#ffd747;
+    text-align: center;
+  }
+  .container{
+    padding:0rpx;
+    margin:50rpx
+  }
+  .userInfo_modify_view {
+    width: 95%;
+  }
+  
+  .userInfo_modify_view form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .userInfo_modify_view .formItem {
+    display: flex;
+    flex-direction: row;
+    line-height: 35rpx;
+    margin-top: 20rpx;
+    justify-content: center;
+    font-size: 35rpx;
+    align-items: flex-start;
+  }
+  
+  .userInfo_modify_view .label {
+    flex: 2; 
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  .userInfo_modify_view .formControl {
+    flex: 5; 
+    margin-right: 20rpx;
+    flex-direction: row;
+  }
+  
+  .userInfo_modify_view .formControl input {
+    border: 1px solid olive;
+    padding: 2px;
+  }
+  
+  .userInfo_modify_view .formControl textarea {
+    width: 95%;
+    border: 1px solid olive;
+    padding: 15rpx;
+    margin-right: 20rpx;
+  }
+  
+  .userInfo_modify_view .formControl .fileNameView {
+    padding: 20rpx 0rpx;
+    line-height: 50rpx;
+    text-decoration: underline;
+  }
+  
+  .userInfo_modify_view .formControl .upfileBtn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid olive; 
+    font-size: 32rpx;
+    padding:20rpx;
+    border-radius: 15rpx;
+  }
+ image{
+   width: 150rpx;
+   height: 150rpx;
+ }
+ .vBtn_ok{
+  background-color: rgb(194, 30, 30);
+  top:60rpx;
+  font-weight: 700;
+}
+ 
+  

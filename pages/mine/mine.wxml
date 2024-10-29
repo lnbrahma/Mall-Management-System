@@ -1,0 +1,61 @@
+ <!-- pages/mine/mine.wxml -->
+ <view class="container">
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 微信账号登录</button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信账号登录 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+    <!--
+    <navigator class="list_a" url="../priceRegion/priceRegion_list">
+        价格区间列表
+    </navigator>
+    <navigator class="list_a" url="../newOldLevel/newOldLevel_list">
+        新旧程度列表
+    </navigator>
+    <navigator class="list_a" url="../areaInfo/areaInfo_list">
+        区域信息列表
+    </navigator>
+     <navigator class="list_a" url="../system/lianx?openid={{openid}}">
+        信息管理
+    </navigator>
+     -->
+    
+    <navigator class="list_a" url="../productInfo_myproject/productInfo_myproject">
+        我发布的二手物品
+    </navigator>
+    <navigator class="list_a" url="../leaveword_add/leaveword_add">
+        我要发布留言
+    </navigator>
+    <navigator class="list_a" url="../leaveword_list/leaveword_list">
+        我的留言列表
+    </navigator>
+    
+    <navigator class="list_a" url="../userInfo/userInfo">
+       修改个人信息
+    </navigator>
+    <navigator class="list_b" url="../lianx/lianx" open-type="redirect">
+        联系我们
+    </navigator>
+    <navigator class="list_b" url="../about/about">
+        关于我们
+    </navigator>
+    <view class="list_b" bindtap="tuichu">
+        退出登录
+    </view>
+  </view>
+</view>
