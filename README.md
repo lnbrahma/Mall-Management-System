@@ -1,8 +1,14 @@
 # 项目名称
-
+二手交易小程序
 ## 简介
 
-这里是对项目的简短介绍。
+一个二手商城交易小程序，包括商品展示，校园分享，发布商品，聊天消息，个人信息等页面
+
+![Image Description](./READMELINK/index.png)
+![Image Description](./READMELINK/compus.png)
+![Image Description](./READMELINK/comunicate.png)
+![Image Description](./READMELINK/form.png)
+![Image Description](./READMELINK/private.png)
 
 ## 安装
 
@@ -11,6 +17,3 @@
 ```bash
 # 使用npm
 npm install
-
-# 或者使用yarn
-yarn install
